@@ -1,1 +1,2 @@
 # C
+# Author: Dennis Ritchie
