@@ -1,15 +1,17 @@
 #include <stdio.h>
-int main() {
-    int number;
-    printf("Enter an integer: ");
-    scanf("%d", &number);
+int main()
+{
+    int n, i;
+    int sum = 0;
+    printf("Enter n : ");
+    scanf("%d", &n);
 
-    if  (number%2 == 0) {
-        printf("%d is an even integer.",number);
+    for (i = 1; i < n; i++)
+    {
+        sum += i;
     }
-    else {
-        printf("%d is an odd integer.",number);
-    }
+
+    printf("%d", sum);
 
     return 0;
 }
