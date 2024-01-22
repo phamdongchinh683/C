@@ -1,17 +1,30 @@
 #include <stdio.h>
+
 int main()
 {
-    int n, i;
-    int sum = 0;
-    printf("Enter n : ");
+    int n;
+    int i = 1;
+    int sumEven = 0;
+    int sumOdd = 0;
+
+    printf("Enter N: ");
     scanf("%d", &n);
 
-    for (i = 1; i < n; i++)
+    do
     {
-        sum += i;
-    }
+        if (i % 2 == 0)
+        {
+            sumEven += i;
+        }
+        else
+        {
+            sumOdd += i;
+        }
+        i++;
+    } while (i <= n);
 
-    printf("%d", sum);
+    printf("Sum of even numbers: %d\n", sumEven);
+    printf("Sum of odd numbers: %d\n", sumOdd);
 
     return 0;
 }
