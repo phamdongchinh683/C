@@ -4,27 +4,20 @@ int main()
 {
     int n;
     int i = 1;
-    int sumEven = 0;
-    int sumOdd = 0;
 
     printf("Enter N: ");
     scanf("%d", &n);
 
-    do
+    while (i <= n)
     {
-        if (i % 2 == 0)
+        if (i % 2 != 0)
         {
-            sumEven += i;
+            i++;
+            continue;
         }
-        else
-        {
-            sumOdd += i;
-        }
+        printf("%d ", i);
         i++;
-    } while (i <= n);
-
-    printf("Sum of even numbers: %d\n", sumEven);
-    printf("Sum of odd numbers: %d\n", sumOdd);
+    }
 
     return 0;
 }
