@@ -1,24 +1,22 @@
 #include <stdio.h>
-void display();
+#include <string.h>
 
-int marks[10];
-int sum = 0;
-unsigned int i, n;
-double average;
+struct Person
+{
+  char name[50];
+  int citNo;
+  float salary;
+} person1;
+
 int main()
 {
-    printf("Enter number of elements: ");
-    scanf("%d", &n);
+  strcpy(person1.name, "George Orwell");
+  person1.salary = 100.000;
+  person1.citNo = 1984;
 
-    for (i = 0; i < n; i++)
-    {
-        printf("Enter element %d: ", i + 1);
-        scanf("%d", &marks[i]);
+  printf("Name: %s\n", person1.name);
+  printf("Citizenship No.: %d\n", person1.citNo);
+  printf("Salary: %.2f", person1.salary);
 
-        sum += marks[i];
-    }
-    average = (double)sum / n;
-
-    printf("Average = %.2lf", average);
-    return 0;
+  return 0;
 }
